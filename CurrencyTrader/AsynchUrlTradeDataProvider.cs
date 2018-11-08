@@ -34,5 +34,10 @@ namespace CurrencyTrader
             string[] lines = e.Result.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             tradeUpdater.UpdateTradeData(lines);
         }
+
+        IEnumerable<string> ITradeDataProvider.GetTradeData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
